@@ -30,7 +30,7 @@ function InputField({ status, start, handleKeyDown, currInput, setCurrInput }) {
           width:'100%'
           
         }}
-        placeholder="Click & Start Typing here "
+        placeholder="Click here & Start Typing"
         value={currInput}
         onChange={(e) => setCurrInput(e.target.value)}
       />
