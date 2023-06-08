@@ -6,7 +6,7 @@ import Statistics from "./components/Statistics";
 import InputField from "./components/InputField";
 import Data from "./Data";
 
-const SECONDS = 10; // 5 minutes
+const SECONDS = 3; // 5 minutes
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
