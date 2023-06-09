@@ -184,6 +184,7 @@ function App() {
             alignItems: "center",
             fontWeight: 600,
             fontSize:60,
+            textAlign:'center',
           }}
         >
           Touch Typing Pro
