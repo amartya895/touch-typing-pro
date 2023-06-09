@@ -31,8 +31,6 @@ function App() {
   useEffect(() => {
     var ran = Math.floor(Math.random() * Data.length);
     setWords(Data[ran]);
-
-    
   }, []);
 
   function start() {
@@ -59,8 +57,6 @@ function App() {
       });
     }, 1000);
   }
-
-  
 
   function handleKeyDown({ keyCode, key }) {
     // space bar
@@ -139,12 +135,12 @@ function App() {
       style={{
         position: "fixed",
         top: 0,
-        left: 0,
+        left: -12,
         width: "100%",
         height: "100%",
         backgroundColor: "#5D5C61",
-
         display: "flex",
+        overflow: "auto",
       }}
     >
       <style>
@@ -184,7 +180,7 @@ function App() {
             fontWeight: 600,
           }}
         >
-         Touch Typing Pro
+          Touch Typing Pro
         </h1>
         <div>
           {status === "finished" && (
@@ -193,6 +189,7 @@ function App() {
           <CountDown timer={formattedTime} />
         </div>
         <div
+          className="content_visible"
           style={{
             backgroundColor: "#B1A296",
             marginTop: 40,
@@ -206,7 +203,7 @@ function App() {
             height: "30%",
             alignItems: "center",
             boxShadow: "1px 2px 3px 4px rgba(100,100,100,0.4)",
-            color:"#242423",
+            color: "#242423",
           }}
         >
           <WordData words={words} getCharClass={getCharClass} />

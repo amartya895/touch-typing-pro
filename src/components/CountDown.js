@@ -14,6 +14,8 @@ function CountDown(props) {
       <h2> {props.timer}</h2>
     </div>
   );
+
+  
 }
 
 export default CountDown;
