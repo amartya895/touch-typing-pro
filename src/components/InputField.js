@@ -26,6 +26,7 @@ function InputField({ status, start, handleKeyDown, currInput, setCurrInput }) {
         alignItems: "center",
         border: "none",
         width: "100%",
+        backgroundColor:'#ffffffed',
       }}
       placeholder="Click here & Start Typing"
       value={currInput}

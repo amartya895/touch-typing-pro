@@ -9,7 +9,7 @@ function Statistics({ wpm, correct, incorrect }) {
     <div
       className="wide-div"
       style={{
-        backgroundColor: "#557A95",
+        backgroundColor: "#000000cc",
         borderRadius: 10,
         display: "flex",
         justifyContent: "center",
@@ -20,20 +20,20 @@ function Statistics({ wpm, correct, incorrect }) {
     >
       <h1 style={{color:'#fcba03',}}>Statistics</h1>
       <div className="column-div">
-        <p className="label" style={{color:'black',fontSize:20}}>Words per minute:</p>
-        <p className="value" style={{fontSize:18}}>{wpm}</p>
+        <p className="label" style={{color:'white',fontSize:20}}>Words per minute:</p>
+        <p className="value" style={{fontSize:20}}>{wpm}</p>
       </div>
       <div className="column-div">
-        <p className="label" style={{color:'black',fontSize:20}}>Accuracy:</p>
-        <p className="value" style={{fontSize:18}}>{accuracy}%</p>
+        <p className="label" style={{color:'white',fontSize:20}}>Accuracy:</p>
+        <p className="value" style={{fontSize:20}}>{accuracy}%</p>
       </div>
       <div className="column-div">
-        <p className="label" style={{color:'black',fontSize:20}}>Correct Words:</p>
-        <p className="value" style={{fontSize:18}}>{correct}</p>
+        <p className="label" style={{color:'white',fontSize:20}}>Correct Words:</p>
+        <p className="value" style={{fontSize:20}}>{correct}</p>
       </div>
       <div className="column-div">
-        <p className="label" style={{color:'black',fontSize:20}}>Incorrect Words:</p>
-        <p className="value" style={{fontSize:18}}>{incorrect}</p>
+        <p className="label" style={{color:'white',fontSize:20}}>Incorrect Words:</p>
+        <p className="value" style={{fontSize:20}}>{incorrect}</p>
       </div>
     </div>
   );

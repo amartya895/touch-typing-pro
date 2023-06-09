@@ -5,6 +5,8 @@ import WordData from "./components/WordData";
 import Statistics from "./components/Statistics";
 import InputField from "./components/InputField";
 import Data from "./Data";
+// import bgpic from '../src/styles/mainbg.jpeg'
+import bgpicFinal from '../src/styles/bg1.jpeg'
 
 const SECONDS = 300; // 5 minutes
 
@@ -135,10 +137,12 @@ function App() {
       style={{
         position: "fixed",
         top: 0,
-        left: -12,
+        backgroundImage:`url(${bgpicFinal})`,
+        left:0,
         width: "100%",
         height: "100%",
-        backgroundColor: "#5D5C61",
+        backgroundColor: "#d7dba7",
+        
         display: "flex",
         overflow: "auto",
       }}
@@ -159,8 +163,9 @@ function App() {
         className="row-d1"
         style={{
           flexGrow: 1,
-          // backgroundColor: "rgb(96 221 187 / 84%)",
-          backgroundColor: "#557A95",
+          
+          backgroundColor: "#000000cc",
+          // backgroundImage:`url(${bgpic})`,
           boxShadow: "1px 2px 3px 4px rgba(20,20,20,0.4)",
           margin: 20,
           display: "flex",
@@ -170,7 +175,7 @@ function App() {
           gap: 10,
         }}
       >
-        <h1
+        <div
           style={{
             color: "#fcba03",
             display: "flex",
@@ -178,10 +183,11 @@ function App() {
             fontFamily: "sans-serif",
             alignItems: "center",
             fontWeight: 600,
+            fontSize:60,
           }}
         >
           Touch Typing Pro
-        </h1>
+        </div>
         <div>
           {status === "finished" && (
             <TimeOverPopup handlerestart={handleRestart} />
@@ -191,7 +197,7 @@ function App() {
         <div
           className="content_visible"
           style={{
-            backgroundColor: "#B1A296",
+            backgroundColor: "#9e9e9ede",
             marginTop: 40,
             fontSize: 50,
             fontWeight: 500,
@@ -202,8 +208,8 @@ function App() {
             width: "100%",
             height: "30%",
             alignItems: "center",
-            boxShadow: "1px 2px 3px 4px rgba(100,100,100,0.4)",
-            color: "#242423",
+            boxShadow: "rgba(82, 82, 82, 0.3) 5px 5px 4px 4px;",
+            color: "#23231ed6",
           }}
         >
           <WordData words={words} getCharClass={getCharClass} />
