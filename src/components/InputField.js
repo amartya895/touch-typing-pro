@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-
+// import '../styles/StatisticsStyle.css'
 function InputField({ status, start, handleKeyDown, currInput, setCurrInput }) {
   const textInput = useRef(null);
 

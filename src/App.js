@@ -5,7 +5,6 @@ import WordData from "./components/WordData";
 import Statistics from "./components/Statistics";
 import InputField from "./components/InputField";
 import Data from "./Data";
-// import bgpic from '../src/styles/mainbg.jpeg'
 import bgpicFinal from '../src/styles/bg1.jpeg'
 
 const SECONDS = 300; // 5 minutes
@@ -211,6 +210,7 @@ function App() {
             alignItems: "center",
             boxShadow: "rgba(82, 82, 82, 0.3) 5px 5px 4px 4px;",
             color: "#23231ed6",
+            
           }}
         >
           <WordData words={words} getCharClass={getCharClass} />
@@ -222,7 +222,7 @@ function App() {
             alignItems: "center",
           }}
         >
-          <InputField
+          <InputField 
             status={status}
             start={start}
             handleKeyDown={handleKeyDown}

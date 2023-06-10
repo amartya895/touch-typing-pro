@@ -58,10 +58,15 @@
     }
     .content_visible {
       
+    
+
     }
-    input {
-      font-size: 15px;  
+    .input {
+      font-size: 21px;  
       margin-top: -25px;    
+    }
+    input::placeholder {
+      font-size: 21px; 
     }
     .wide-div {
       flex-direction: column;
@@ -92,7 +97,7 @@
       right: 2px;
     }
     span {
-      font-size: 14px;
+      font-size: 25px;
       margin-top: 5px;
     }
     .content {
