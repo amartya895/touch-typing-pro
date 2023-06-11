@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 // import '../styles/StatisticsStyle.css'
 function InputField({ status, start, handleKeyDown, currInput, setCurrInput }) {
-  const textInput = useRef(null);
+  
 
-  useEffect(() => {
-    textInput.current.focus();
-  }, []);
+  // useEffect(() => {
+  //   textInput.current.focus();
+  // }, []);
 
   return (
     <input
-      ref={textInput}
+      
       disabled={status === "finished"}
       onClick={start}
       type="text"
