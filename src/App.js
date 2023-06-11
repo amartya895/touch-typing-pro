@@ -7,7 +7,7 @@ import InputField from "./components/InputField";
 import Data from "./Data";
 import bgpicFinal from '../src/styles/bg1.jpeg'
 
-const SECONDS = 300; // 5 minutes
+const SECONDS = 10; // 5 minutes
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
@@ -28,6 +28,7 @@ function App() {
   const [correct, setCorrect] = useState(0);
   const [incorrect, setIncorrect] = useState(0);
   const [status, setStatus] = useState("waiting");
+  const [timerRun , setTimerRun] = useState(true)
 
   useEffect(() => {
     var ran = Math.floor(Math.random() * Data.length);
@@ -35,28 +36,35 @@ function App() {
   }, []);
 
   function start() {
-    var ran = Math.floor(Math.random() * Data.length);
-    setWords(Data[ran]);
-    setCurrWordIndex(0);
-    setCorrect(0);
-    setIncorrect(0);
-    setCurrCharIndex(-1);
-    setCurrChar("");
-    setStatus("started");
-    setCountDown(SECONDS);
 
-    let interval = setInterval(() => {
-      setCountDown((prevCountdown) => {
-        if (prevCountdown === 0) {
-          clearInterval(interval);
-          setStatus("finished");
-          setCurrInput("");
-          return SECONDS;
-        } else {
-          return prevCountdown - 1;
-        }
-      });
-    }, 1000);
+    if(timerRun){
+
+      var ran = Math.floor(Math.random() * Data.length);
+      setWords(Data[ran]);
+      setCurrWordIndex(0);
+      setCorrect(0);
+      setIncorrect(0);
+      setCurrCharIndex(-1);
+      setCurrChar("");
+      setStatus("started");
+      setCountDown(SECONDS);
+      setTimerRun(false);
+  
+      let interval = setInterval(() => {
+        setCountDown((prevCountdown) => {
+          if (prevCountdown === 0) {
+            clearInterval(interval);
+            setStatus("finished");
+            setTimerRun(true);
+            setCurrInput("");
+            return SECONDS;
+          } else {
+            return prevCountdown - 1;
+          }
+        });
+      }, 1000);
+    }
+   
   }
 
   function handleKeyDown({ keyCode, key }) {
