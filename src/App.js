@@ -140,9 +140,8 @@ function App() {
         left:0,
         width: "100%",
         height: "100%",
-        backgroundColor: "#d7dba7",
-        
         display: "flex",
+        backgroundColor: "#000000cc",
         overflow: "auto",
       }}
     >
@@ -164,7 +163,7 @@ function App() {
           flexGrow: 1,
           
           backgroundColor: "#000000cc",
-          // backgroundImage:`url(${bgpic})`,
+         
           boxShadow: "1px 2px 3px 4px rgba(20,20,20,0.4)",
           margin: 20,
           display: "flex",
