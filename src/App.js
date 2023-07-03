@@ -38,7 +38,6 @@ function App() {
   function start() {
 
     if(timerRun){
-
       var ran = Math.floor(Math.random() * Data.length);
       setWords(Data[ran]);
       setCurrWordIndex(0);
